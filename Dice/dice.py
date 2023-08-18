@@ -1,3 +1,9 @@
+'''
+   This is a simple dice program where you choose 2-5 players. 
+   When you choose to roll you can continue until you roll a 1 then your
+   roll stops and score is added to the running total.  When a player reaches 
+   a score of 50 then the game stops.
+'''
 import random
 import time
 import colorama
@@ -39,18 +45,19 @@ while max(playerScore) < maxScore:
             dice = roll()
             if dice == 1:
                 print("You rolled a 1!  Turn over")
+                print(f"Player {player_idx +1} your current score is {playerScore[player_idx]}")
                 time.sleep(5)
                 break
             else:
                 print("You rolled a ", dice)
                 currentScore += dice
-                print("Your current score is ", currentScore)
+                print("Your current roll score is ", currentScore)
+                playerScore[player_idx] += dice
+                print(f"Your overall total is {playerScore[player_idx]}")
+                if playerScore[player_idx] > maxScore:
+                    break
         print("\033[2J\033[1;1f")
-        playerScore[player_idx] += currentScore
-        print(f"Player {player_idx + 1} your total score is ",
-              playerScore[player_idx])
-        if playerScore[player_idx] > maxScore:
-            break
-scoreIdx = max(playerScore)
-winner = playerScore.index(scoreIdx)
-print(f"The winner is player {player_idx + 1} ")
+highest_score = max(playerScore)        
+winningIdx = playerScore.index(highest_score)
+
+print(f"The winner is Player {winningIdx + 1} with a score of {highest_score}" )
