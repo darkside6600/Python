@@ -1,0 +1,1 @@
+A wine inventory program that will list out all all wines.  Will let you list out just reds, just whites, or the wines that are not reds or whites.  This is setup to use file I/O to store in a csv file.  The file Generate_wine_test_data.py allows to build a csv file with random wine type and years in order to test the overall functionality of the program.
