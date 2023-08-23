@@ -26,6 +26,8 @@ def main():
             if choice in menu:
                 if choice == 1:
                     subprocess.run(["python", "wine_list.py"])
+                if choice == 2:
+                    subprocess.run(["python", "wine_red_list.py"])
                 if choice == 5:
                     subprocess.run(["python", "wine_new_bottle.py"])
                 if choice == 7:

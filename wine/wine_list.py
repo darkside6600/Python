@@ -1,7 +1,7 @@
 '''
 This wil list out all wines 
 '''
-
+import msvcrt
 import colorama, csv
 import pandas as pd
 
@@ -9,7 +9,7 @@ colorama.init()
 
 
 print("\033[2J\033[1;1f")
-
+'''
 wine_collection = []
 
 
@@ -28,12 +28,17 @@ def main():
     
     for row in wine_data:
         print(row)
-
-file = ".\wine_collection.csv"
-df = pd.read_csv(file)
-pd.options.display.max_columns = len(df.columns)
-print(df)
-
+'''
+def main():
+    file = "wine_collection.csv"
+    df = pd.read_csv(file)
+    pd.options.display.max_columns = len(df.columns)
+    print(df)
+    while True:
+        print("Press any key to continue.")
+        key = msvcrt.getch()  # For Windows
+        if key:
+            break
 
 if __name__ == "__main__":
     main()

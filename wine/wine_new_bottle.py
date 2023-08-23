@@ -3,7 +3,7 @@ this is for entering in a new bottle of wine.
 
 Year, Wine maker, type
 '''
-import colorama, csv
+import colorama, csv, os
 
 colorama.init()
 
@@ -27,9 +27,11 @@ def inputWine(wine_collection):
     print("Wine added successfully!")
 
 def write_list_to_csv(data_list, file_name):
-    with open(file_name, 'w', newline='') as csvfile:
+    file_exists = os.path.isfile(file_name) # check if file exists   
+    with open(file_name, 'a' if file_exists else 'w', newline='') as csvfile:    
         csv_writer = csv.writer(csvfile)
-        csv_writer.writerow(["Year", "Manufacturer", "Type"])  # Write header row
+        if not file_exists:
+            csv_writer.writerow(["Year", "Manufacturer", "Type"])  # Write header row
         for row in data_list:
             csv_writer.writerow([row["Year"], row["Manufacturer"], row["Type"]])
 
