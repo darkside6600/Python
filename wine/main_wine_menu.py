@@ -1,12 +1,15 @@
 import subprocess
-
+import colorama
+colorama.init()
 
 def displayMenu(menu):
+    print("\033[2J\033[1;1f")
     print("Wine Menu:")
     for key, value in menu.items():
         print(f"{key}. {value}")
 
 def main():
+    print("\033[2J\033[1;1f")
     menu = {
         1: "List all wines",
         2: "List all Red wines",
@@ -28,8 +31,14 @@ def main():
                     subprocess.run(["python", "wine_list.py"])
                 if choice == 2:
                     subprocess.run(["python", "wine_red_list.py"])
+                if choice == 3:
+                    subprocess.run(["python", "wine_white_list.py"])
+                if choice == 4:
+                    subprocess.run(["python", "wine_other_list.py"])
                 if choice == 5:
                     subprocess.run(["python", "wine_new_bottle.py"])
+                if choice == 6:
+                    subprocess.run(["python", "wine_delete_bottle.py"])
                 if choice == 7:
                     print("Quiting")
                     break
