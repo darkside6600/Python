@@ -34,8 +34,11 @@ def getWineList():
 def main():
     wine_data = getWineList()
     whites = listWhite (wine_data)
-    white_list = pd.Series(whites)
-    print(white_list)
+    if whites:
+        df = pd.DataFrame(whites, columns=["Year", "Winery", "Type", "Quantity"])
+        print(df)
+    else:
+        print("No red wines found in the collection.")
     while True:
         print("Press any key to continue.")
         key = msvcrt.getch()  # For Windows

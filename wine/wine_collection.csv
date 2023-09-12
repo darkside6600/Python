@@ -1,26 +1,26 @@
-Year,Manufacturer,Type
-2016,Winery A,Gewurztraminer
-1996,Winery C,Moscato
-1993,Winery C,Cabernet Sauvignon
-2001,Winery B,Sauvignon Blanc
-1993,Winery A,Pinot Noir
-2013,Winery A,Cabernet Sauvignon
-2014,Winery E,Pinot Noir
-1995,Winery E,Semillon
-2013,Winery E,Chardonnay
-1998,Winery D,Malbec
-2012,Winery E,Riesling
-1999,Winery E,Merlot
-2001,Winery A,Other
-2012,Winery B,Other
-2003,Winery D,Gewurztraminer
-1992,Winery B,Gewurztraminer
-1991,Winery C,Pinot Noir
-2021,Winery E,Semillon
-2019,Winery A,Chardonnay
-2007,Winery D,Pinot Grigio
-1995,Winery E,Riesling
-2023,Winery B,Semillon
-2014,Winery D,Viognier
-1998,Winery B,Pinot Grigio
-2016,Winery C,Chardonnay
+Year,Winery,Type,Quantity
+1992,Winery D,Syrah,1
+1993,Winery B,Malbec,4
+1994,Winery D,Verdelho,4
+1995,Winery E,Chardonnay,4
+1995,Winery C,Riesling,4
+1996,Winery E,Gewurztraminer,1
+1998,Winery C,Merlot,2
+1998,Winery C,Syrah,1
+1998,Winery C,Chenin Blanc,4
+2000,Winery A,Gewurztraminer,1
+2000,Winery C,Merlot,2
+2002,Winery B,Chardonnay,2
+2002,Winery B,Moscato,2
+2004,Winery A,Syrah,1
+2005,Winery D,Other,4
+2005,Winery B,Gewurztraminer,4
+2007,Winery B,Other,4
+2009,Winery A,Verdelho,1
+2010,Winery A,Pinot Noir,2
+2012,Winery B,Riesling,1
+2017,Winery C,Pinot Grigio,1
+2018,Winery E,Sauvignon Blanc,2
+2018,Winery E,Cabernet Sauvignon,1
+2020,Winery A,Pinot Grigio,4
+2023,Winery A,Other,1
