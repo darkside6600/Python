@@ -2,6 +2,7 @@ import tkinter as tk
 
 def save_text():
     user_input = text_entry.get()
+    ticket_number = text_entry.get
     with open("D:\\git\\Python\\work\\user_input.txt", "w") as file:
         file.write(user_input)
     print("Text saved to D:\\git\\Python\\work\\user_input.txt")
